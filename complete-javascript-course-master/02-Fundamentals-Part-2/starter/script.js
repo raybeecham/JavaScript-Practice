@@ -52,6 +52,7 @@ console.log(appleOrangeJuice);
 * 12/13/2020
 */
 
+/*
 // Function declaration
 function calcAge1(birthYear) {
     return 2037 - birthYear;
@@ -65,3 +66,28 @@ const calcAge2 = function (birthYear){
 }
 const age2 = calcAge2(1988)
 console.log(age1, age2);
+
+/**Ray Beecham
+* Arrow Functions
+* 12/13/2020
+*/
+
+// Arrow function
+const calcAge3 = birthYear => 2037 - birthYear
+const age3 = calcAge3(1988)
+//console.log(age3);
+
+const yearsUntilRetirement = (firstName) => {
+    const age = 2020 - prompt("When were you born?");
+    firstName = prompt("and what is your name?")
+    const retirement = 70 - Number(age);
+    
+    // return retirement;
+    if (age <= 70) {
+    return `${firstName} retires in ${retirement} years if he/she retires at age 70.` 
+    } else {
+        console.log(`${firstName} you are past the age of retirement (70) old fart!`);
+    }
+}
+
+console.log(yearsUntilRetirement());
