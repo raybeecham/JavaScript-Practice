@@ -26,7 +26,7 @@ if (hasDriversLicense) console.log('I can drive!');
 * 12/11/2020
 */
 
-
+/*
 function logger() {
     console.log('My name is Ray');
 }
@@ -47,9 +47,21 @@ console.log(fruitProcessor(5, 0));
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
-
-
 /**Ray Beecham
-* Functions
+* Function Declarations vs Expressions
 * 12/13/2020
 */
+
+// Function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1988);
+
+// Function Expression
+const calcAge2 = function (birthYear){
+    return 2037 - birthYear;
+}
+const age2 = calcAge2(1988)
+console.log(age1, age2);
