@@ -117,10 +117,12 @@ console.log(fruitProcessor(2,3));
 * 12/13/2020
 */
 
+/*
 // calculate the age of the person
 const calcAge = function (birthYear) {
     return 2020 - birthYear;
 }
+
 
 // store birth year and name and retirement age
 const yearsUntilRetirement = function (firstName) {
@@ -138,3 +140,46 @@ const yearsUntilRetirement = function (firstName) {
     }
 }
 console.log(yearsUntilRetirement());
+
+/**Ray Beecham
+* Coding Challenge #1
+* 12/13/2020
+*/
+
+const calcAverage = (score1, score2, score3) =>  (score1 + score2 + score3) / 3;
+
+const scoreDolphins = calcAverage(44,23,71)
+const scoreKoalas = calcAverage(65,54,49)
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinnner = function(avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins Win the trophy (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas Win the trophy (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log('No team wins...');
+    }
+}
+
+checkWinnner(scoreDolphins, scoreKoalas)
+
+// Average Paycheck Calculator
+
+const calcAvgPaycheck = (paycheck1, paycheck2) => (paycheck1 + paycheck2) / 2;
+
+const rayPayCheck = calcAvgPaycheck(4020, 1748);
+const lizPayCheck = calcAvgPaycheck(4000, 1748);
+
+
+const checkPaycheck = function(avgRay, avgLiz) {
+    if (avgRay > avgLiz) {
+        console.log(`Ray has a higher pay ${avgRay} vs ${avgLiz}`);
+    } else if (avgLiz > avgRay) {
+        console.log(`Liz has a higher pay ${avgLiz} vs ${avgRay}`);
+    } else {
+        console.log(`Y'all make the same pay!`);
+    }
+}
+checkPaycheck(rayPayCheck, lizPayCheck)
+checkPaycheck(2000, 1800)
