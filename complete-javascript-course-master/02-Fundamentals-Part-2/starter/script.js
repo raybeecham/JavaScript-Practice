@@ -98,6 +98,7 @@ console.log(yearsUntilRetirement());
 * 12/13/2020
 */
 
+/*
 function cutFruitPieces(fruit) {
     return fruit * 4
 }
@@ -110,3 +111,30 @@ function fruitProcessor(apples, oranges) {
     return juice;
 }
 console.log(fruitProcessor(2,3));
+
+/**Ray Beecham
+* Reviewing Functions
+* 12/13/2020
+*/
+
+// calculate the age of the person
+const calcAge = function (birthYear) {
+    return 2020 - birthYear;
+}
+
+// store birth year and name and retirement age
+const yearsUntilRetirement = function (firstName) {
+    const age = calcAge(prompt("When were you born?"))
+    firstName = prompt("What is your name?")
+    const retirement = 70 - Number(age);
+    
+    // return retirement
+    if (age <= 70 && age >= 0) {
+    return `${firstName} retires in ${retirement} years if he/she retires at age 70.` 
+    } else if (age < 0) {
+        console.log(`You age cannot be below 0.`);
+    }else{
+        console.log(`${firstName} you are past the age of retirement (70) you old fart!`);
+    }
+}
+console.log(yearsUntilRetirement());
