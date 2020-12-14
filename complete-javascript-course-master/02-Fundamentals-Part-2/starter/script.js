@@ -146,6 +146,7 @@ console.log(yearsUntilRetirement());
 * 12/13/2020
 */
 
+/*
 const calcAverage = (score1, score2, score3) =>  (score1 + score2 + score3) / 3;
 
 const scoreDolphins = calcAverage(44,23,71)
@@ -183,3 +184,125 @@ const checkPaycheck = function(avgRay, avgLiz) {
 }
 checkPaycheck(rayPayCheck, lizPayCheck)
 checkPaycheck(2000, 1800)
+
+/**Ray Beecham
+* Arrays
+* 12/13/2020
+*/
+
+/*
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+// Literal syntax
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020)
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+// Arrays can be mutated from const
+friends[2] = 'Jay';
+console.log(friends);
+// friends = ['Bob', 'Alice']
+
+const firstName = 'Ray'
+const ray = [firstName, 'B', 2037-1998, 'programmer', friends];
+console.log(ray);
+console.log(ray.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[2]);
+const age4 = calcAge(years[3]);
+console.log(age1,age2, age3, age4);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
+const age = [age1, age2, age3, age4]
+console.log(age);
+
+/**Ray Beecham
+* Basic Array Operations (Methods)
+* 12/13/2020
+*/
+
+/*
+const friends = ['Michael', 'Steven', 'Peter'];
+
+// Add elements
+const newLength = friends.push('Jay')
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John');
+console.log(friends);
+
+// Remove elements
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Larry'));
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Larry'));
+console.log(friends.includes('23'));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend named Steven');
+}
+
+/**Ray Beecham
+* Coding Challenge #2
+* 12/13/2020
+*/
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+console.log(bills, tips, totals);
+
+// Paycheck Challenge
+
+const calcPaycheckTax = (paycheck) => paycheck * 0.1947
+
+const rayPayCheck = [2417];
+const lizPayCheck = [1822];
+
+const rayTax = [calcPaycheckTax(rayPayCheck[0])];
+const lizTax = [calcPaycheckTax(lizPayCheck[0])];
+const rayTotalPayChecks = [rayPayCheck[0] - rayTax [0]];
+const lizTotalPayChecks = [lizPayCheck[0] - lizTax[0]];
+
+console.log(rayPayCheck, lizPayCheck, Math.round(rayTotalPayChecks), Math.round(lizTotalPayChecks));
+
+
+
+
+
+
+
+//const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
