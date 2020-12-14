@@ -26,6 +26,30 @@ if (hasDriversLicense) console.log('I can drive!');
 * 12/11/2020
 */
 
-function logger(params) {
+
+function logger() {
     console.log('My name is Ray');
 }
+// calling / running/ invoking function
+logger();
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0)
+console.log(appleJuice);
+console.log(fruitProcessor(5, 0));
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+
+
+/**Ray Beecham
+* Functions
+* 12/13/2020
+*/
