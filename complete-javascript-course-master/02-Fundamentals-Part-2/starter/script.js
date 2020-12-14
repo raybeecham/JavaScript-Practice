@@ -72,6 +72,7 @@ console.log(age1, age2);
 * 12/13/2020
 */
 
+/*
 // Arrow function
 const calcAge3 = birthYear => 2037 - birthYear
 const age3 = calcAge3(1988)
@@ -91,3 +92,21 @@ const yearsUntilRetirement = (firstName) => {
 }
 
 console.log(yearsUntilRetirement());
+
+/**Ray Beecham
+* Functions calling other functions
+* 12/13/2020
+*/
+
+function cutFruitPieces(fruit) {
+    return fruit * 4
+}
+
+function fruitProcessor(apples, oranges) {
+    const applepPieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applepPieces} pieces of apple and ${orangePieces} pieces of orange.`;
+    return juice;
+}
+console.log(fruitProcessor(2,3));
